@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="JSILVAfm — uma experiência de rádio cinematográfica.">
+<title>JSILVAfm — Sinta a frequência</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <a class="brand" href="#inicio" aria-label="JSILVAfm início"><span class="brand-mark">J<span>•</span></span><span>JSILVA<span class="orange">fm</span></span></a>
+  <nav class="desktop-nav"><a href="#experiencia">Experiência</a><a href="#programacao">Programação</a><a href="#sobre">Sobre</a></nav>
+  <a class="listen-small" href="#ao-vivo"><span class="live-dot"></span> Ouvir agora</a>
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-grid"></div><div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-line"></span> SUA FREQUÊNCIA. SEU UNIVERSO.</div>
+    <h1>O som que<br>move <em>você.</em></h1>
+    <p>Uma nova experiência sonora. Música, energia e conexão em uma só frequência.</p>
+    <div class="hero-actions"><a class="btn-primary" href="#ao-vivo"><span class="play-icon">▶</span> Sintonizar agora</a><a class="text-link" href="#experiencia">Explorar experiência <span>↘</span></a></div>
+    <div class="hero-meta"><span><i class="live-dot"></i> EXPERIÊNCIA DIGITAL</span><span>EST. 2026</span></div>
+  </div>
+  <div class="hero-orb"><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div><div class="orb-core"><span>JS</span><small>FM</small></div><div class="orb-wave wave-a"></div><div class="orb-wave wave-b"></div></div>
+  <div class="scroll-cue"><span>ROLE PARA EXPLORAR</span><b></b></div>
+</section>
+<section class="film-section" id="experiencia">
+  <div class="film-sticky">
+    <video id="scrollVideo" muted playsinline preload="auto" poster=""><source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"></video>
+    <div class="video-shade"></div>
+    <div class="film-top"><span class="eyebrow"><span class="eyebrow-line"></span> JSILVAfm ORIGINAL EXPERIENCE</span><span class="film-counter" id="counter">01 / 04</span></div>
+    <div class="film-caption" aria-live="polite">
+      <div class="caption-item active" data-step="0"><span class="caption-index">01 — CONEXÃO</span><h2>Uma frequência.<br><em>Mil emoções.</em></h2><p>Entre no ritmo e deixe o mundo lá fora.</p></div>
+      <div class="caption-item" data-step="1"><span class="caption-index">02 — ENERGIA</span><h2>Viva cada<br><em>batida.</em></h2><p>Uma trilha sonora para acompanhar seus momentos.</p></div>
+      <div class="caption-item" data-step="2"><span class="caption-index">03 — LIBERDADE</span><h2>Seu mundo.<br><em>Seu som.</em></h2><p>Descubra uma experiência feita para você.</p></div>
+      <div class="caption-item" data-step="3"><span class="caption-index">04 — SINTONIA</span><h2>Aumente o som.<br><em>Sinta a diferença.</em></h2><p>JSILVAfm. A sua próxima sintonia começa aqui.</p></div>
+    </div>
+    <div class="film-bottom"><span>SCROLL CONTROL</span><div class="progress-track"><div id="filmProgress"></div></div><span id="progressLabel">00%</span></div>
+  </div>
+</section>
+<section class="onair section-pad" id="ao-vivo">
+  <div class="section-kicker"><span class="live-dot"></span> CENTRAL DE SINTONIA</div>
+  <div class="onair-layout">
+    <div><h2>Conecte-se<br>com a <em>JSILVAfm.</em></h2><p>Prepare-se para ouvir. Este player está pronto para receber o endereço do streaming da sua rádio.</p></div>
+    <div class="player-card">
+      <div class="player-head"><div class="cover-art"><span>J<span>•</span></span><small>JSILVAfm</small></div><div class="track-info"><span class="live-label"><i class="live-dot"></i> PLAYER DEMONSTRATIVO</span><strong>Sua rádio, sua frequência</strong><small>Adicione seu link de streaming no arquivo script.js</small></div></div>
+      <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="player-controls"><button id="playRadio" class="round-play" aria-label="Tocar rádio">▶</button><div class="volume-wrap"><span>VOLUME</span><input id="volume" type="range" min="0" max="1" step=".01" value=".8"></div><span class="player-status" id="playerStatus">AGUARDANDO STREAM</span></div>
+      <audio id="radioAudio" preload="none"></audio>
+    </div>
+  </div>
+</section>
+<section class="programs section-pad" id="programacao">
+  <div class="section-heading"><div><div class="section-kicker">NO SEU RITMO</div><h2>Mais que rádio.<br><em>Uma vibe.</em></h2></div><p>Uma programação pensada para acompanhar você em todos os momentos do dia.</p></div>
+  <div class="program-grid">
+    <article class="program-card card-blue"><span class="card-number">01</span><div class="card-symbol">◉</div><h3>Manhã<br>em movimento</h3><p>Comece o dia com energia e boas vibrações.</p><span class="card-time">A SUA MANHÃ, NO RITMO</span></article>
+    <article class="program-card card-orange"><span class="card-number">02</span><div class="card-symbol">♫</div><h3>Hits sem<br>parar</h3><p>Uma sequência de músicas para não deixar a energia cair.</p><span class="card-time">MÚSICA O DIA TODO</span></article>
+    <article class="program-card card-violet"><span class="card-number">03</span><div class="card-symbol">✦</div><h3>Noite<br>infinita</h3><p>Desacelere, relaxe e encontre a sua sintonia.</p><span class="card-time">SUA NOITE, SUA TRILHA</span></article>
+  </div>
+</section>
+<section class="manifesto section-pad" id="sobre"><div class="manifesto-glow"></div><div class="section-kicker">NOSSA ESSÊNCIA</div><h2>Não é só ouvir.<br>É <em>sentir.</em></h2><p>JSILVAfm é conexão, descoberta e movimento. Uma experiência digital criada para aproximar você da música.</p><a href="#ao-vivo" class="btn-primary">Faça parte dessa sintonia <span>↗</span></a><div class="manifesto-watermark">JSILVA<span>fm</span></div></section>
+</main>
+<footer><a class="brand" href="#inicio"><span class="brand-mark">J<span>•</span></span><span>JSILVA<span class="orange">fm</span></span></a><span>© 2026 JSILVAfm — TODOS OS DIREITOS RESERVADOS</span><a href="#inicio">VOLTAR AO TOPO ↑</a></footer>
+<script src="script.js"></script>
+</body></html>
